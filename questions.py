@@ -12,15 +12,15 @@ questions = [
     },
 
     {
-        "name":"description", "type": "editor", "message": "Please provide a description of the project"
+        "name":"description", "type": "input", "message": "Please provide a description of the project"
     },
 
     {
-        "name":"installation", "type": "editor", "message": "What steps were taken to make this software runnable?"
+        "name":"installation", "type": "input", "message": "What steps were taken to make this software runnable?"
     },
 
     {
-        "name":"usage", "type": "editor", "message": "How is this program designed to be used?"
+        "name":"usage", "type": "input", "message": "How is this program designed to be used?"
     },
 
     {
