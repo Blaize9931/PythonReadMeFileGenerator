@@ -1,5 +1,6 @@
 # Prompts the user for all specified details: title, description, installation, usage, license, author, and contact.
 from InquirerPy import prompt
+from InquirerPy.prompts.expand import ExpandChoice
 
 questions [
     {
@@ -30,3 +31,5 @@ questions [
         "name":"Contact", "type": "input", "message": "Please give details of how to contact yourself.", "validate": ""
     }
 ]
+
+import questions
