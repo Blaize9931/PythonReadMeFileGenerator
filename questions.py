@@ -4,7 +4,10 @@ from InquirerPy.prompts.expand import ExpandChoice
 
 def licensing_choices (_):
     return [
-            ExpandChoice(key="m", name="MIT", value="MIT")
+            ExpandChoice(key="m", name="MIT", value="MIT"),
+            ExpandChoice(key="a", name="Apache2.0", value="Apache2.0"),
+            ExpandChoice(key="b", name="BSD", value="BSD"),
+            ExpandChoice(key="t", name="The Unlicense", value="The Unlicense")
         ]
 questions = [
     {
