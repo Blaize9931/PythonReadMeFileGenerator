@@ -16,19 +16,19 @@ questions [
     },
 
     {
-        "name":"usage", "type": "editor", "message": "How is this program designed to be used?", "validate": ""
+        "name":"usage", "type": "editor", "message": "How is this program designed to be used?"
     },
 
     {
-        "name":"license", "type": "expand", "message": "What licensing do you have?", "validate": ""
+        "name":"license", "type": "expand", "message": "What licensing do you have?"
     },
 
     {
-        "name":"author", "type": "input", "message": "Please provide name/s of author", "validate": ""
+        "name":"author", "type": "input", "message": "Please provide name/s of author" 
     },
 
     {
-        "name":"Contact", "type": "input", "message": "Please give details of how to contact yourself.", "validate": ""
+        "name":"contact", "type": "input", "message": "Please give details of how to contact yourself." 
     }
 ]
 
