@@ -8,6 +8,7 @@ def licensing_choices (_):
             ExpandChoice(key="a", name="Apache2.0", value="Apache2.0"),
             ExpandChoice(key="b", name="BSD", value="BSD"),
             ExpandChoice(key="t", name="The Unlicense", value="The Unlicense"),
+            ExpandChoice(key="n", name="None", value="None"),
         ]
 questions = [
     {
@@ -34,17 +35,21 @@ questions = [
     },
 
     {
-        "name":"license", "type": "expand", "choices": licensing_choices, "message": "What licensing do you have?",   
+        "name":"license", "type": "expand", "choices": licensing_choices, "message": "What licensing do you have?", 
+        "validate": lambda results: len(results) > 0,
+        "invalid_message": "This cannot be left blank. If none the choose none",   
     },
 
     {
-        "name":"author", "type": "input", "message": "Please provide name/s of author" 
+        "name":"author", "type": "input", "message": "Please provide name/s of author",
+        "validate": lambda results: len(results) > 0,
+        "invalid_message": "This cannot be left blank. If you want to remain anonymous please write N/A"
     },
 
     {
         "name":"contact", "type": "input", "message": "Please give details of how to contact yourself.",
         "validate": lambda results: len(results) > 0,
-        "invalid_message": "This field is required", 
+        "invalid_message": "This cannot be left blank. If you want to remain anonymous please write N/A", 
     }
 ]
 def collect_answers():
