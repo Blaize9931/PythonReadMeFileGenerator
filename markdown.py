@@ -8,26 +8,26 @@ def markdown(results):
     license=results["license"]
     author=results["author"]
     contact=results["contact"]
-    content = textwrap.dedent(f"""\\
-    #{title}
+    content = textwrap.dedent(f"""\
+# {title}
 
-    ##Description
-    {description}
+## Description
+{description}
 
-    ##Installation
-    {installation}
+## Installation
+{installation}
 
-    ##Usage
-    {usage}
+## Usage
+{usage}
 
-    ##License
-    {license}
+## License
+{license}
 
-    ##Author
-    {author}
+## Author
+{author}
 
-    ##Contact Details
-    {contact}
-    """)
+## Contact Details
+{contact}
+""")
     with open("README.md", "w", encoding="utf-8") as file:
         file.write(content)
