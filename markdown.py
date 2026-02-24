@@ -8,7 +8,7 @@ def markdown(results):
     license=results["license"]
     author=results["author"]
     contact=results["contact"]
-    return textwrap.dedent(f"""\\
+    content = textwrap.dedent(f"""\\
     # {title}
 
     ## Description
@@ -29,3 +29,5 @@ def markdown(results):
     ## Contact Details
     {contact}
     """)
+    with open("README.md", "w", encoding="utf-8") as file:
+        file.write(content)
